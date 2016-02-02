@@ -132,7 +132,7 @@
 
                     console.log("shorten pno: "+pno);
 
-                    var longUrl = "http://192.168.28:3000/poll/" + pno;
+                    var longUrl = "http://localhost:3000/poll/" + pno;
                     var request = gapi.client.urlshortener.url.insert({
                         'resource': {
                             'longUrl': longUrl

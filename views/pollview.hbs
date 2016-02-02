@@ -176,6 +176,18 @@
             /*self.location="/result/{{pno}}";*/
 
         });//end of btn click
+        //항목 눌렀을 때 멀티 옵션이 f면 1개만 선택 가능하도록
+        $("input[name=chkBoxes]").on("click",function(){
 
+            console.log("{{multiOpt}}");
+            if("{{multiOpt}}" === "f")
+            {
+                $("input[name=chkBoxes]:checked").each(function () {
+                    $(this).prop("checked", false);
+                });
+
+                $(this).prop("checked", true);
+            }
+        });
     });
 </script>
